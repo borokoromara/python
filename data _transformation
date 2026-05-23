@@ -1,0 +1,116 @@
+# Transformation of data
+
+"""price = "123,45"
+# USE case- Clean Numeric Formats
+# replace commas with dots in European-style decimal numbers
+price = price.replace(",", ".")
+print(price)"""
+
+"""phone =  "+ 224-622-71-99-99"
+print(phone.replace(" ", "").replace("-", "/"))
+#Repalce() is jot just for changing values you can also remove unwanted parts by replacing them with empty string("")"""""
+
+# use case - Clean phone Numbers
+# remove special characters from phone numbers
+
+"""phone = "+ 224-622-71-99-99"
+clean_phone = phone.replace("-", "").replace(" ", "").replace("+", "") """
+
+
+# Python Challenges
+# Covert the messy phone number into a clean number format with only digits like this: 00491767149956
+messy_phone = "+49-(176)-714-9956"
+clean_phone = messy_phone.replace("+", "00").replace("(", "").replace(")", "").replace("-", "")
+print(clean_phone)
+
+
+#Data Transformation
+#Joins Strings
+first_name = "Saran"
+last_name = "MARA"
+full_name = first_name + " " + last_name
+print(full_name)
+
+# another exercise
+folder ="C:/User/kabal"
+file_name = "data.csv"
+# use case - Build File Paths
+# Build dynamic paths using folder and file variables
+full_file_path = folder + "/" + file_name
+print(full_file_path)   
+
+
+
+#Data Transformation
+#f-strings
+
+name = "Saran"
+age = 3
+is_student = False
+print(f"My name is {name}, I am {age} years old, and it is {is_student} that I am a student.") # more professional. Shorter, cleaner, easier to read !
+#another way to write this.
+print("My name is " + name + ", I am " + str(age) + " years old, and it is " + str(is_student) + " that I am a student.") # hard to read -
+ #There are lots of plus signs and you have to worry about spaces and types.
+
+
+# Data Transformation
+# split()
+
+stamp = "2024-06-01 12:30:45"
+print(stamp.split(" "))
+# Break a  date into year, month and day parts
+stamp = "2024-06-01"
+print(stamp.split("-"))
+
+#another exemple 
+csv_file = "John,Doe,30,Engineer, FRANCE, 2012-09-15,M"
+print(csv_file.split(","))
+
+# Data Transformation
+# String Repetion
+
+print("Hello " * 3) # Hello Hello Hello
+print("==========================================================")
+
+# use case - Style Your Logs
+# use repeated characters to create clear sections in output
+
+print("=================================================")
+
+# So now in order to control how many like equals
+
+print("=" * 30)
+print("=" * 30) 
+
+
+# Data Transformation
+# Indexing & Slicing
+text = "Python"
+# extraxt the first characters
+print(text[0]) #or 
+print(text[-6]) 
+# extarct the last character
+print(text[-1])  #or 
+print(text[5]) # n
+
+
+# Extract h
+print(text[3]) #or   
+print(text[-3]) # h
+
+
+# another exemple
+date = "2024-06-01"
+
+#EXtract the year
+print(date[0:4]) # or
+print(date[:4])
+
+# Extract the month
+print(date[5:7]) # or
+print(date[5:]) # or
+
+# Extract the day
+print(date[8:]) # or
+print(date[-2:])
+
